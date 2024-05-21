@@ -43,7 +43,7 @@ module.exports = {
           test: /\.tsx?$/,
           exclude: /node_modules/,
           // TypeScript をコンパイルする
-          use: "ts-loader"
+          use: "ts-loader",
         },
         {
             test: /\.css$/,
