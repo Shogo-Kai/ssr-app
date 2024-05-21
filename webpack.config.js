@@ -20,7 +20,7 @@ module.exports = {
       rules: [
         {
             // 拡張子 .js の場合
-            test: /\.js$/,
+            test: /\.(ts|js)x?$/,
             exclude: /node_modules/,
             use: [
               {
@@ -32,19 +32,13 @@ module.exports = {
                     // プリセットを指定することで、ES5 に変換
                     "@babel/preset-env",
                     // React の JSX を解釈
-                    "@babel/react"
+                    "@babel/react",
+                    "@babel/preset-typescript",
                   ]
                 }
               }
             ]
           },
-        {
-          // 拡張子 .ts もしくは .tsx の場合
-          test: /\.tsx?$/,
-          exclude: /node_modules/,
-          // TypeScript をコンパイルする
-          use: "ts-loader",
-        },
         {
             test: /\.css$/,
             use: [
