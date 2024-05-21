@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:server": "webpack --config webpack.config.js",
+    "start:server": "node dist/main.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
